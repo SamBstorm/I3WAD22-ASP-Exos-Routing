@@ -44,6 +44,14 @@ namespace I3WAD22_ASP_Exos
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
+
+                //endpoints.MapControllerRoute(
+                //    name:"MathCarre",
+                //    pattern:"Math/{id}/auCarre",
+                //    defaults : new { Controller = "Math", Action = "Carre"}
+                //    );
+
                 endpoints.MapControllerRoute(
                     name: "Contrat",
                     pattern: "Contrat-de-confidentialite",
