@@ -36,5 +36,10 @@ namespace I3WAD22_ASP_Exos.Controllers
             if(nombre2 != 0) return (nombre1 / (double)nombre2).ToString();
             return "Attention, division par 0 impossible.";
         }
+
+        public IActionResult TableauCroise()
+        {
+            return View();
+        }
     }
 }
