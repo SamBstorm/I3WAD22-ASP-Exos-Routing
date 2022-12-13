@@ -1,0 +1,25 @@
+﻿@using I3WAD22_ASP_Exos.Models.ViewModels
+@model ProductIndexViewModel
+
+<h1>@ViewData["Title"]</h1>
+
+@if(Model.nbProduct > 0)
+            {
+                <ul>
+                    @foreach (Product product in Model.Products)
+                    {
+                    <li>
+                        <div>
+                            <h3>@product.Name</h3>
+                            <p>@product.Price €</p>
+                            <p>@((product.Stock < 5 )?"Stock presque épuisé":"Produit disponible")</p>
+                        </div>
+                    </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Pas de produit pour le moment...</p>
+            }
+<p>Il y a actuellement : @Model.nbProduct produit@((Model.nbProduct>1)?"s":"")</p>

@@ -37,8 +37,12 @@ namespace I3WAD22_ASP_Exos.Controllers
             return "Attention, division par 0 impossible.";
         }
 
-        public IActionResult TableauCroise()
+        //domaine/Math/TableauCroise?nbCase=15
+        //domaine/Math/TableauCroise/15
+        [Route("Math/TableauCroise/{nbCase?}")]
+        public IActionResult TableauCroise(int nbCase=10)
         {
+            ViewData["nbCase"] = nbCase;
             return View();
         }
     }
